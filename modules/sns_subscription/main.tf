@@ -6,7 +6,7 @@ resource "aws_sns_topic_subscription" "subscription" {
 }
 
 resource "aws_sqs_queue_policy" "sns_to_sqs" {
-  count = var.protocol == "sqs" ? 0 : 1
+  count = var.protocol == "sqs" ? 1 : 0
   queue_url = var.sqs_endpoint_url
   policy = jsonencode({
     Version = "2012-10-17"

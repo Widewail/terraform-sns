@@ -3,6 +3,7 @@ resource "aws_sns_topic_subscription" "subscription" {
   protocol = var.protocol
   topic_arn = var.sns_topic_arn
   raw_message_delivery = var.raw_message_delivery
+  filter_policy = var.filter_policy
 }
 
 resource "aws_sqs_queue_policy" "sns_to_sqs" {

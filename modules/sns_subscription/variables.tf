@@ -21,3 +21,9 @@ variable sqs_endpoint_url {
   default = null
   description = "Provide to create a default policy for SNS to write to SQS"
 }
+
+variable "filter_policy" {
+  type = string
+  default = null
+  description = "See SNS docs for valid JSON"
+}

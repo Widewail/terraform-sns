@@ -3,7 +3,7 @@ variable "name" {
 }
 variable "tags" {
   type = map(string)
-  default = {}
+  default = null
 }
 variable "env" {
   type = string
